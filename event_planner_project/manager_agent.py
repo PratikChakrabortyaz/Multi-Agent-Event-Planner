@@ -10,7 +10,7 @@ HF_TOKEN =  user_secrets.get_secret("HF_TOKEN")
 # Manager Agent to coordinate all agents
 manager_agent = CodeAgent(
     model=HfApiModel(
-        "deepseek-ai/DeepSeek-R1",
+        "Qwen/Qwen2.5-7B-Chat",
         token=HF_TOKEN
     ),
     tools=[],
