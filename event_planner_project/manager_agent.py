@@ -11,17 +11,17 @@ HF_TOKEN =  user_secrets.get_secret("HF_TOKEN")
 task_prompt = """
 Plan a superhero-themed party with decorations, catering, and entertainment for 20 guests.
 For each task:
-- Use `theme_agent.run()` for themes.
-- Use `catering_agent.run()` for catering.
-- Use `entertainment_agent.run()` for entertainment.
-- Use `decoration_agent.run()` for decorations.
+- Use `tools['theme_agent'].run()` for themes.
+- Use `tools['catering_agent'].run()` for catering.
+- Use `tools['entertainment_agent'].run()` for entertainment.
+- Use `tools['decoration_agent'].run()` for decorations.
 
 Here’s the exact code template to follow:
 
-theme = tools['theme_agent'].run("Suggest a superhero party theme.")
-decorations = tools['decoration_agent'].run("Suggest superhero-themed decorations.")
-catering = tools['catering_agent'].run("Suggest superhero-themed catering ideas.")
-entertainment = tools['entertainment_agent'].run("Suggest superhero-themed entertainment ideas.")
+theme = self.tools['theme_agent'].run("Suggest a superhero party theme.")
+decorations = self.tools['decoration_agent'].run("Suggest superhero-themed decorations.")
+catering = self.tools['catering_agent'].run("Suggest superhero-themed catering ideas.")
+entertainment = self.tools['entertainment_agent'].run("Suggest superhero-themed entertainment ideas.")
 
 final_answer({
     "theme": theme,
@@ -30,7 +30,6 @@ final_answer({
     "entertainment": entertainment
 })
 """
-
 
 
 # Manager Agent to coordinate all agents
