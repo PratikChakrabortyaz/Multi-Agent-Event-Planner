@@ -1,4 +1,4 @@
-from smolagents import CodeAgent, HfApiModel
+from smolagents import CodeAgent, HfApiModel,Tool
 from agents import theme_agent, catering_agent, entertainment_agent, decoration_agent
 import pandas as pd
 from kaggle_secrets import UserSecretsClient
