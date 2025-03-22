@@ -55,3 +55,21 @@ def entertainment_search_tool(query: str) -> str:
         "Retro Party": "Play 80s and 90s karaoke, have a dance-off, or set up a vintage arcade gaming zone."
     }
     return entertainment_options.get(query, "No matching entertainment idea found. Try 'Superhero Party', 'Casino Night', or 'Hollywood Glam'.")
+@tool
+def decoration_search_tool(query: str) -> str:
+    """
+    Suggests decoration ideas for a given party theme.
+
+    Args:
+        query (str): The selected party theme (e.g., 'Superhero Party').
+
+    Returns:
+        str: Recommended decoration options for the theme.
+    """
+    decoration_options = {
+        "Superhero Party": "Hang posters of superheroes, use comic strip table covers, and add action figure centerpieces.",
+        "Casino Night": "Decorate with playing cards, red-black-gold color themes, and a poker table setup.",
+        "Hollywood Glam": "Set up a red carpet entrance, movie poster walls, and golden drapery for a luxury vibe.",
+        "Retro Party": "Use disco balls, neon lights, and posters of iconic 80s/90s bands for a nostalgic feel."
+    }
+    return decoration_options.get(query, "No matching decoration idea found. Try 'Superhero Party', 'Casino Night', or 'Hollywood Glam'.")
