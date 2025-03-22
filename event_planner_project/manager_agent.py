@@ -31,10 +31,7 @@ final_answer({
 })
 """
 
-# Guardrail Logic to Prevent Invalid Code
-def validate_generated_code(generated_code):
-    if "Agent" in generated_code:
-        raise ValueError("❌ Incorrect agent function detected. Please revise the code.")
+
 
 # Manager Agent to coordinate all agents
 manager_agent = CodeAgent(
@@ -53,6 +50,5 @@ manager_agent = CodeAgent(
     max_steps=15,
     name="Manager Agent",
     description="Orchestrates specialized agents to generate a complete party plan.",
-    validate_code=validate_generated_code  # Guardrail integrated
 )
 
