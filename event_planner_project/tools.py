@@ -3,7 +3,13 @@ from smolagents import tool
 @tool
 def theme_search_tool(query: str) -> str:
     """
-    Searches for creative party themes and returns a list of ideas.
+    Searches for creative party themes.
+
+    Args:
+        query (str): The name of the theme requested (e.g., 'Superhero Party').
+
+    Returns:
+        str: A description of the requested theme or a fallback message.
     """
     ideas = {
         "Superhero Party": "Guests dress as their favorite superheroes.",
