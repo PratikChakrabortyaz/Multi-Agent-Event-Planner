@@ -1,0 +1,6 @@
+smolagents[all]
+requests
+beautifulsoup4
+plotly
+pandas
+gradio
