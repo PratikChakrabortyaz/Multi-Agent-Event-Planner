@@ -10,7 +10,7 @@ HF_TOKEN =  user_secrets.get_secret("HF_TOKEN")
 # Manager Agent to coordinate all agents
 manager_agent = CodeAgent(
     model=HfApiModel(
-        "mistralai/Mistral-7B-Instruct-v0.1",
+        "Qwen/Qwen2.5-Coder-32B-Instruct",
         token=HF_TOKEN
     ),
     tools=[],
