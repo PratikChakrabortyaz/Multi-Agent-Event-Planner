@@ -1,8 +1,8 @@
 from smolagents import ToolCallingAgent
 from smolagents import HfApiModel
 from tools import theme_search_tool
-import os
-
+from kaggle_secrets import UserSecretsClient
+user_secrets = UserSecretsClient()
 # Load Hugging Face Token
 HF_TOKEN =  user_secrets.get_secret("HF_TOKEN")
 
