@@ -13,7 +13,7 @@ manager_agent = CodeAgent(
         "deepseek-ai/DeepSeek-R1",
         token=HF_TOKEN
     ),
-    tools=[]
+    tools=[],
     managed_agents=[
         theme_agent,
         catering_agent,
