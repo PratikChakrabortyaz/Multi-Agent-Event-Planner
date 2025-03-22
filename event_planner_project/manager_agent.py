@@ -8,7 +8,7 @@ HF_TOKEN =  user_secrets.get_secret("HF_TOKEN")
 
 
 # Improved Prompt for Manager Agent
-task = """
+task_prompt = """
 Plan a superhero-themed party with decorations, catering, and entertainment for 20 guests.
 For each task:
 - Use `theme_agent.run()` for themes.
@@ -53,7 +53,6 @@ manager_agent = CodeAgent(
     max_steps=15,
     name="Manager Agent",
     description="Orchestrates specialized agents to generate a complete party plan.",
-    task=task,
     validate_code=validate_generated_code  # Guardrail integrated
 )
 

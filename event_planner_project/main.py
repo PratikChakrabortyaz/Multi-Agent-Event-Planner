@@ -1,11 +1,9 @@
-from manager_agent import manager_agent
+from manager_agent import manager_agent, task_prompt  # Import the correct prompt
 
 def main():
-    task = "Plan a superhero-themed party with decorations, catering, and entertainment for 20 guests."
-    result = manager_agent.run(task)
-    
-    print("🎉 Complete Party Plan:")
-    print(result)
+    result = manager_agent.run(task_prompt)
+    print("🎉 Complete Party Plan: ", result)
 
 if __name__ == "__main__":
     main()
+
