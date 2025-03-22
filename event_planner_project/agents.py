@@ -16,3 +16,13 @@ theme_agent = ToolCallingAgent(
     name="Theme Agent",
     description="Finds creative and trending party themes."
 )
+catering_agent = ToolCallingAgent(
+    tools=[catering_search_tool],
+    model=HfApiModel(
+        "Qwen/Qwen2.5-Coder-32B-Instruct",
+        token=HF_TOKEN
+    ),
+    max_steps=5,
+    name="Catering Agent",
+    description="Suggests catering services for themed events."
+)

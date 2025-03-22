@@ -18,3 +18,22 @@ def theme_search_tool(query: str) -> str:
         "Retro Party": "Dress up in 80s and 90s outfits with vintage decorations."
     }
     return ideas.get(query, "No matching theme found. Try 'Superhero Party', 'Casino Night', or 'Hollywood Glam'.")
+
+@tool
+def catering_search_tool(query: str) -> str:
+    """
+    Suggests catering options for a given party theme.
+
+    Args:
+        query (str): The selected party theme (e.g., 'Superhero Party').
+
+    Returns:
+        str: Recommended catering ideas for the theme.
+    """
+    catering_options = {
+        "Superhero Party": "Serve 'Justice League Pizza', 'Avengers Mocktails', and 'Spider-Man Cupcakes'.",
+        "Casino Night": "Offer finger foods like mini burgers, cheese platters, and themed cocktails.",
+        "Hollywood Glam": "Serve gourmet sliders, caviar bites, and sparkling cocktails for elegance.",
+        "Retro Party": "Bring back nostalgic snacks like popcorn, candy sticks, and classic soda bottles."
+    }
+    return catering_options.get(query, "No matching catering idea found. Try 'Superhero Party', 'Casino Night', or 'Hollywood Glam'.")
