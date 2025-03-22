@@ -1,22 +1,11 @@
-from agents import theme_agent, catering_agent, entertainment_agent, decoration_agent
+from manager_agent import manager_agent
 
 def main():
-    theme_query = "Superhero Party"
-    theme_result = theme_agent.run(theme_query)
+    task = "Plan a superhero-themed party with decorations, catering, and entertainment for 20 guests."
+    result = manager_agent.run(task)
     
-    catering_query = "Superhero Party"
-    catering_result = catering_agent.run(catering_query)
-    
-    entertainment_query = "Superhero Party"
-    entertainment_result = entertainment_agent.run(entertainment_query)
-    
-    decoration_query = "Superhero Party"
-    decoration_result = decoration_agent.run(decoration_query)
-    
-    print("🎯 Suggested Theme Idea:", theme_result)
-    print("🍽️ Recommended Catering:", catering_result)
-    print("🎬 Entertainment Idea:", entertainment_result)
-    print("🎈 Decoration Idea:", decoration_result)
+    print("🎉 Complete Party Plan:")
+    print(result)
 
 if __name__ == "__main__":
     main()
