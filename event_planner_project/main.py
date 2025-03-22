@@ -1,4 +1,4 @@
-from manager_agent import manager_agent, task_prompt  # Import the correct prompt
+from manager_agent import manager_agent, task_prompt
 
 def main():
     result = manager_agent.run(task_prompt)

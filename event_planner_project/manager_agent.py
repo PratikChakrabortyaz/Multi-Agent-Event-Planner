@@ -18,10 +18,10 @@ For each task:
 
 Here’s the exact code template to follow:
 
-theme = theme_agent.run("Suggest a superhero party theme.")
-decorations = decoration_agent.run("Suggest superhero-themed decorations.")
-catering = catering_agent.run("Suggest superhero-themed catering ideas.")
-entertainment = entertainment_agent.run("Suggest superhero-themed entertainment ideas.")
+theme = tools['theme_agent'].run("Suggest a superhero party theme.")
+decorations = tools['decoration_agent'].run("Suggest superhero-themed decorations.")
+catering = tools['catering_agent'].run("Suggest superhero-themed catering ideas.")
+entertainment = tools['entertainment_agent'].run("Suggest superhero-themed entertainment ideas.")
 
 final_answer({
     "theme": theme,
