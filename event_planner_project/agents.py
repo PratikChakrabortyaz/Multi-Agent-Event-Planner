@@ -1,6 +1,6 @@
 from smolagents import ToolCallingAgent
 from smolagents import HfApiModel
-from tools import theme_search_tool,catering_search_tool
+from tools import theme_search_tool,catering_search_tool,entertainment_search_tool
 from kaggle_secrets import UserSecretsClient
 user_secrets = UserSecretsClient()
 # Load Hugging Face Token
@@ -25,4 +25,14 @@ catering_agent = ToolCallingAgent(
     max_steps=5,
     name="Catering Agent",
     description="Suggests catering services for themed events."
+)
+entertainment_agent = ToolCallingAgent(
+    tools=[entertainment_search_tool],
+    model=HfApiModel(
+        "Qwen/Qwen2.5-Coder-32B-Instruct",
+        token=HF_TOKEN
+    ),
+    max_steps=5,
+    name="Entertainment Agent",
+    description="Finds entertainment ideas for themed parties."
 )
